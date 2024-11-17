@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: test-postgres
+  flyway:
+    locations: classpath:/db/migration
+    schemas: data
+    baselineOnMigrate: true
+    enabled: true
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/datadb?currentSchema=data
+    username: postgres
+    password: pwd
